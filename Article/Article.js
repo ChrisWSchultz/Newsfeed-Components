@@ -136,6 +136,9 @@ const articleComponent = (post) => {
 
   const articleButton = document.createElement('span');
   articleButton.classList.add('expandButton');
+  articleButton.addEventListener('click', () => {
+    articleDiv.classList.toggle('article-open');
+  });
 
   articleDiv.appendChild(articleTitle);
   articleDiv.appendChild(articleDate);
@@ -146,3 +149,9 @@ const articleComponent = (post) => {
 
   return articleDiv;
 };
+
+const articles = document.querySelector('.articles');
+
+data.forEach((element) => {
+  articles.appendChild(articleComponent(element))
+});
