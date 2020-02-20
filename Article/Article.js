@@ -136,6 +136,7 @@ const articleComponent = (post) => {
 
   const articleButton = document.createElement('span');
   articleButton.classList.add('expandButton');
+  articleButton.innerText ="Read More";
   articleButton.addEventListener('click', () => {
     articleDiv.classList.toggle('article-open');
   });
